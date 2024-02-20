@@ -1,0 +1,29 @@
+<!-- main/templates/main/transaction_history.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Transaction History</h2>
+
+  {% if transactions %}
+    <table>
+      <thead>
+        <tr>
+          <th>Car Number</th>
+          <th>Toll Fee</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for transaction in transactions %}
+          <tr>
+            <td>{{ transaction.car_number }}</td>
+            <td>{{ transaction.toll_fee }}</td>
+            <td>{{ transaction.timestamp }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No transactions found.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Toll Fee Entered Successfully</h2>
+  <p>Transaction Details:</p>
+  <ul>
+    <li>Car Number: {{ transaction.car_number }}</li>
+    <li>Toll Fee: ${{ transaction.toll_fee }}</li>
+  </ul>
+  <a href="{% url 'transaction_history' %}">View Transaction History</a>
+{% endblock %}

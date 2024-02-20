@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Error: {{ error_message }}</h2>
+  <a href="{% url 'dashboard' %}">Go Back to Dashboard</a>
+{% endblock %}
